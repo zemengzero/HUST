@@ -1,0 +1,180 @@
+/* 通用样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #333;
+    font-weight: bold;
+}
+
+/* 页面布局 */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 3px;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 页面内容 */
+.page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.page p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.page ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.page img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 页面切换效果 */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 按钮样式 */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* 底部样式 */
+footer {
+    text-align: center;
+    padding: 2px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .page h2 {
+        font-size: 1.5rem;
+    }
+
+    .page p, .page ul {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .page h2 {
+        font-size: 1.3rem;
+    }
+
+    .page p {
+        font-size: 0.95rem;
+    }
+}
+/* 设置标题样式 */
+header {
+    background-color: #333; /* 设置背景色为深灰色 */
+    padding: 20px; /* 为header设置一些内边距 */
+}
+
+.main-title {
+    text-align: center; /* 标题居中对齐 */
+    font-size: 48px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体为粗体 */
+    color: #FFFFE0; /* 设置字体颜色为白色 */
+    margin-top: 0; /* 设置标题与页面顶部的间距 */
+    margin-bottom: 30px; /* 设置标题与下方内容的间距 */
+    font-family: 'Arial', sans-serif; /* 设置字体 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加文字阴影效果 */
+}
+
+video {
+    position: relative;
+    width: 640px;
+    height: 360px;
+}
+

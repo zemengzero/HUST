@@ -3,79 +3,94 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f0f2f5;
     color: #333;
+    line-height: 1.6;
 }
 
-h1, h2 {
-    color: #333;
-    font-weight: bold;
-}
-
-/* 页面布局 */
+/* 页面整体布局 */
 header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 3px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.main-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FFFFE0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 导航栏样式 */
 nav {
     background-color: #333;
     overflow: hidden;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
     float: left;
     display: block;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 14px 20px;
+    padding: 16px 20px;
     text-decoration: none;
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     background-color: #575757;
     color: #fff;
+    transform: scale(1.05);
 }
 
+/* 页面容器样式 */
 .container {
     width: 80%;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* 页面内容 */
+/* 页面内容样式 */
 .page h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #444;
+    font-weight: 600;
 }
 
 .page p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
+    color: #555;
 }
 
 .page ul {
     list-style-type: disc;
-    margin-left: 20px;
+    margin-left: 30px;
     font-size: 1.1rem;
+    color: #555;
 }
 
 .page img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 页面切换效果 */
@@ -89,46 +104,49 @@ nav a:hover {
 
 /* 按钮样式 */
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
     font-size: 16px;
+    margin-top: 20px;
 }
 
 button:hover {
     background-color: #45a049;
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 底部样式 */
 footer {
     text-align: center;
-    padding: 2px;
+    padding: 15px;
     background-color: #333;
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
     .container {
-        width: 95%;
-        padding: 10px;
+        width: 90%;
+        padding: 15px;
     }
 
     nav a {
-        padding: 10px;
+        padding: 12px;
         font-size: 16px;
     }
 
     .page h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .page p, .page ul {
@@ -138,43 +156,49 @@ footer {
 
 @media (max-width: 480px) {
     nav a {
-        padding: 8px;
+        padding: 10px;
         font-size: 14px;
     }
 
     .container {
         width: 100%;
-        padding: 8px;
+        padding: 10px;
     }
 
     .page h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .page p {
         font-size: 0.95rem;
     }
-}
-/* 设置标题样式 */
-header {
-    background-color: #333; /* 设置背景色为深灰色 */
-    padding: 20px; /* 为header设置一些内边距 */
+
+    .main-title {
+        font-size: 32px;
+    }
 }
 
-.main-title {
-    text-align: center; /* 标题居中对齐 */
-    font-size: 48px; /* 设置字体大小 */
-    font-weight: bold; /* 设置字体为粗体 */
-    color: #FFFFE0; /* 设置字体颜色为白色 */
-    margin-top: 0; /* 设置标题与页面顶部的间距 */
-    margin-bottom: 30px; /* 设置标题与下方内容的间距 */
-    font-family: 'Arial', sans-serif; /* 设置字体 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 添加文字阴影效果 */
-}
-
+/* 设置视频样式 */
 video {
     position: relative;
-    width: 640px;
-    height: 360px;
+    width: 100%;
+    height: auto;
+    max-width: 640px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+}

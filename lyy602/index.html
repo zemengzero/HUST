@@ -71,12 +71,47 @@ body {
     <div class="page active" id="page1">
 	
         <h2>中国八大菜系</h2>
-        <p>中国的八大菜系分别是鲁菜、川菜、粤菜、苏菜、浙菜、闽菜、湘菜和徽菜。它们代表了中国丰富多彩的饮食文化，每个菜系都有独特的风味和做法。<br>
-菜系是在选料、切配、烹饪等技艺方面，经长期演变而自成体系，具有鲜明的地方风味特色，并为社会所公认的中国饮食的菜肴流派。<br>
-中国饮食文化的菜系，是指在一定区域内，由于气候、地形、历史、物产及饮食风俗的不同，经过漫长历史演变而形成的一整套自成体系的烹饪技艺和风味，并被全国各地所承认的地方菜肴。
+	<!-- 引入 Font Awesome 图标库 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-item">
+            <img src="images/a.jpg" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+            <img src="images/b.jpg" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+            <img src="images/c.jpg" alt="Slide 3">
+        </div>
+        <div class="carousel-item">
+            <img src="images/d.jpg" alt="Slide 4">
+        </div>
+        <div class="carousel-item">
+            <img src="images/e.jpg" alt="Slide 5">
+        </div>
+        <div class="carousel-item">
+            <img src="images/f.jpg" alt="Slide 6">
+        </div>
+        <div class="carousel-item">
+            <img src="images/g.jpg" alt="Slide 7">
+        </div>
+        <div class="carousel-item">
+            <img src="images/h.jpg" alt="Slide 8">
+        </div>
+    </div>
+
+    <!-- 左右按钮 -->
+    <div class="carousel-controls">
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
+        <p>    中国的八大菜系分别是鲁菜、川菜、粤菜、苏菜、浙菜、闽菜、湘菜和徽菜。它们代表了中国丰富多彩的饮食文化，每个菜系都有独特的风味和做法。<br>
+菜系是在选料、切配、烹饪等技艺方面，经长期演变而自成体系，具有鲜明的地方风味特色，并为社会所公认的中国饮食的菜肴流派。<br>    中国饮食文化的菜系，是指在一定区域内，由于气候、地形、历史、物产及饮食风俗的不同，经过漫长历史演变而形成的一整套自成体系的烹饪技艺和风味，并被全国各地所承认的地方菜肴。
 早在商周时期中国的膳食文化已有雏形，以太公望最为代表 ，再到春秋战国的齐桓公时期，饮食文化中南北菜肴风味就表现出差异。到唐宋时，南食、北食各自形成体系。到了南宋时期，南甜北咸的格局形成。在清朝初年，川菜、鲁菜、淮扬菜、粤菜，成为当时最有影响的地方菜，被称作四大菜系。到了清朝末年，浙江菜、闽菜、湘菜、徽菜四大新地方菜系分化形成，共同构成汉民族饮食的“八大菜系”。 </p>
- 	<img src="images/1-1.png" alt="中国八大菜系" class="banner-image" width="600" height="400"><br>
-		<video width="640" height="360" controls>
+ 	<br>		<video width="1280" height="720" controls>
         <source src="images/1.mp4" type="video/mp4">
 	</video>
 	<br>
@@ -438,24 +473,26 @@ body {
     };
 
     // 显示指定页面
-    function showPage(pageNumber) {
-        // 隐藏所有页面
-        let pages = document.querySelectorAll('.page');
-        pages.forEach(function(page) {
-            page.classList.remove('active');
-        });
+   function showPage(pageNumber) {
+    // 隐藏所有页面
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(function(page) {
+        page.classList.remove('active');
+    });
+    // 显示选中的页面
+    document.getElementById('page' + pageNumber).classList.add('active');
+    
+    // 滚动到页面顶部
+    window.scrollTo(0, 0);
 
-        // 显示指定的页面
-        let pageToShow = document.getElementById('page' + pageNumber);
-        if (pageToShow) {
-            pageToShow.classList.add('active');
-        }
-
-        // 保存当前页面到 sessionStorage
-        sessionStorage.setItem('lastPage', pageNumber);
-    }
+    // 保存当前页面到 sessionStorage
+    sessionStorage.setItem('lastPage', pageNumber);
+}
 </script>
-<script src="script.js"></script>
+
+<script src="scripts.js">
+
+</script>
 
 </body>
 </html>

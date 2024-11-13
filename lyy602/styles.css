@@ -8,6 +8,12 @@ body {
     line-height: 1.6;
 }
 
+body {
+    background-image: url(images/background.jpg);
+    background-repeat: repeat; /* 背景图像重复 */
+    background-size: cover;    /* 背景图像覆盖整个视口 */
+    background-attachment: fixed; /* 保持背景图固定不随滚动而移动 */
+}
 /* 页面整体布局 */
 header {
     background-color: #333;
@@ -127,9 +133,10 @@ footer {
     padding: 15px;
     background-color: #333;
     color: #fff;
-    position: fixed;
+    position: fixed;   /* 固定在底部 */
     bottom: 0;
-    width: 100%;
+    left: 0;           /* 确保从屏幕左边开始 */
+    width: 100%;       /* 让宽度充满屏幕 */
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,6 +159,118 @@ footer {
     .page p, .page ul {
         font-size: 1rem;
     }
+}
+body, html {
+    height: 100%;  /* 让页面整体高度充满屏幕 */
+    margin: 0;     /* 清除默认的外边距 */
+    padding: 0;    /* 清除默认的内边距 */
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px; /* 给底部留出空间，避免 footer 遮挡内容 */
+    min-height: calc(100vh - 120px); /* 保证内容区至少占满屏幕高度，留出空间给 header 和 footer */
+}
+
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 轮播图容器 */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;  /* 隐藏超出容器的部分 */
+    margin: 50px 0;
+}
+
+/* 轮播图项目 */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;  /* 平滑过渡 */
+}
+
+.carousel-item {
+    width: 100%;  /* 每个项目占满容器宽度 */
+    height: auto;
+    flex-shrink: 0;  /* 防止项目缩放 */
+}
+
+/* 控制按钮样式 */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);  /* 控制按钮垂直居中 */
+    z-index: 10;  /* 保证按钮在图片上方 */
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;  /* 字体大小 */
+    cursor: pointer;
+    border-radius: 50%;  /* 按钮圆形 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);  /* 放大效果 */
+}
+
+/* Font Awesome 图标大小 */
+button i {
+    font-size: 24px;  /* 调整箭头图标大小 */
+}
+
+/* 页面的内容样式 */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.banner-image {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
 }
 
 @media (max-width: 480px) {
@@ -193,9 +312,9 @@ nav a.home-link {
 /* 设置视频样式 */
 video {
     position: relative;
-    width: 100%;
+    width: 200%;
     height: auto;
-    max-width: 640px;
+    max-width: 1280px;
     margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

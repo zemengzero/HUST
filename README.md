@@ -1,1 +1,3 @@
-# HUST_Practical_Lessons_Work
+# 华中科技大学
+## 刘亦奕
+lyy602文件夹为新生实践课网页作业

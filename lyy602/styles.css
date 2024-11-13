@@ -177,6 +177,19 @@ footer {
         font-size: 32px;
     }
 }
+/* 使用 Flexbox 来布局导航栏 */
+nav {
+    display: flex;           /* 启用 Flexbox 布局 */
+    justify-content: space-between; /* 将项分布到两端，主页按钮靠右 */
+    align-items: center;     /* 垂直居中对齐所有项 */
+}
+
+/* 可选：让主页按钮更突出 */
+nav a.home-link {
+    font-weight: bold;
+    color: #FFD700; /* 主页按钮的颜色 */
+}
+
 
 /* 设置视频样式 */
 video {

@@ -19,7 +19,7 @@ header {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -130,7 +130,7 @@ button:hover {
 /* 底部样式 */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background-color: #333;
     color: #fff;
     position: fixed;   /* 固定在底部 */
@@ -308,6 +308,58 @@ nav a.home-link {
     font-weight: bold;
     color: #FFD700; /* 主页按钮的颜色 */
 }
+.container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色 */
+    color: #fff; /* 白色文字，确保在黑色背景上可见 */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 60px; /* 给底部留出空间，避免 footer 遮挡内容 */
+    min-height: calc(100vh - 120px); /* 保证内容区至少占满屏幕高度，留出空间给 header 和 footer */
+}
+/* 全局样式 - 设置文字颜色为白色 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: white; /* 所有文字颜色设为白色 */
+    line-height: 1.6;
+}
+
+/* 页面内容样式 */
+.page p, .page ul, .page h2, .main-title {
+    color: white; /* 确保所有文本都为白色 */
+}
+
+/* 其他元素（如果有）同样可以应用这个颜色 */
+.container {
+    color: white; /* 保证容器内的文字也为白色 */
+}
+
+/* 确保按钮文字为白色 */
+button {
+    color: white;
+}
+
+/* 确保导航栏文字为白色 */
+nav a {
+    color: white;
+}
+/* 设置所有链接文字为黄色 */
+a {
+    color: #FFD700; /* 黄色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+/* 鼠标悬停时，链接文字变成亮黄色，增加下划线效果 */
+a:hover {
+    color: #FFEA00; /* 亮黄色 */
+    text-decoration: underline; /* 添加下划线 */
+}
+
 
 /* 设置视频样式 */
 video {

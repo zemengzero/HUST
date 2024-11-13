@@ -190,7 +190,6 @@ nav a.home-link {
     color: #FFD700; /* 主页按钮的颜色 */
 }
 
-
 /* 设置视频样式 */
 video {
     position: relative;
@@ -214,9 +213,4 @@ video {
 
 ::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, 0.1);
-}
-body {
-  background-image: url('background.jpg');
-  background-size: cover;
-  filter: brightness(50%); /* 将背景变暗，增强对比度 */
 }
